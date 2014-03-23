@@ -21,7 +21,7 @@ Our decryption function will take the input text.
 Build every ROT decryption.
 
       e=(A[A[k](c)...].concat A[...A[k](c)] for c in i)
-      d=(e.map((l)->l[x]).join '' for x in [0..25])
+      d=[0..25].map (x)->e.map((l)->l[x]).join ''
 
 Calculate the likelihood scores.
 

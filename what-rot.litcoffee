@@ -5,19 +5,14 @@ My answer to [What ROT is this?][1] on Code Golf Stack Exchange.
 Since the algorithm has been provided the trick here will be brevity
 of representation.
 
-The English alphabet.
+The English alphabet, and then ordered by frequency.
 
     A="abcdefghijklmnopqrstuvwxyz"
-
-The English alphabet, ordered by frequency.
-
     F="etaoinshrdlcumwfgypbvkjxqz"
 
 Some golf hacks.
 
     k="indexOf"
-    m="map"
-    j="join"
 
 Our decryption function will take the input text.
 
@@ -25,12 +20,12 @@ Our decryption function will take the input text.
 
 Build every ROT decryption.
 
-      e=i.split('')[m] (c)->x=A[k] c;A[x...].concat A[...x]
-      d=(e[m]((l)->l[x])[j] '' for x in [0..25])
+      e=i.split('').map (c)->x=A[k] c;A[x...].concat A[...x]
+      d=(e.map ((l)->l[x]).join '' for x in [0..25])
 
 Calculate the likelihood score.
 
-      s=d[m] (v)-> (F[k] c for c in v).reduce (p,c)->p+c
+      s=d.map (v)->(F[k] c for c in v).reduce (p,c)->p+c
 
 Output min likelihood score and decryption.
 

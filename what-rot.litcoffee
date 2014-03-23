@@ -13,23 +13,28 @@ The English alphabet, ordered by frequency.
 
     F="etaoinshrdlcumwfgypbvkjxqz"
 
+Some golf hacks.
+
+    k="indexOf"
+    m="map"
+    j="join"
+
 Our decryption function will take the input text.
 
     r=(i)->
 
 Build every ROT decryption.
 
-      e=i.split ''
-        .map (c)->x=A.indexOf c;A[x...].concat A[...x]
-      d=(e.map((l)->l[x]).join '' for x in [0..25])
+      e=i.split('')[m] (c)->x=A[k] c;A[x...].concat A[...x]
+      d=(e[m]((l)->l[x])[j] '' for x in [0..25])
 
 Calculate the likelihood score.
 
-      s=d.map (v)-> (F.indexOf c for c in v).reduce (p,c)->p+c
+      s=d[m] (v)-> (F[k] c for c in v).reduce (p,c)->p+c
 
 Output min likelihood score and decryption.
 
-      "#{26-(m=s.indexOf Math.min.apply 0,s)} #{e.map((l)->l[m]).join('')}"
+      "#{26-(_=s[k] Math.min.apply 0,s)} #{d[_]}"
 
 And finally we'll export the function for the purpose of console
 testing.  These characters aren't counted.

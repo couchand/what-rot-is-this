@@ -20,10 +20,10 @@ Our decryption function will take the input text.
 
 Build every ROT decryption.
 
-      e=i.split('').map (c)->x=A[k] c;A[x...].concat A[...x]
-      d=(e.map ((l)->l[x]).join '' for x in [0..25])
+      e=(A[A[k](c)...].concat A[...A[k](c)] for c in i)
+      d=(e.map((l)->l[x]).join '' for x in [0..25])
 
-Calculate the likelihood score.
+Calculate the likelihood scores.
 
       s=d.map (v)->(F[k] c for c in v).reduce (p,c)->p+c
 

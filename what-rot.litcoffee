@@ -7,7 +7,7 @@ of representation.
 
 The English alphabet, and then ordered by frequency.
 
-    A="abcdefghijklmnopqrstuvwxyz"
+    A=(A="abcdefghijklmnopqrstuvwxyz").concat A
     F="etaoinshrdlcumwfgypbvkjxqz"
 
 Some golf hacks.
@@ -20,7 +20,7 @@ Our decryption function will take the input text.
 
 Build every ROT decryption.
 
-      e=(A[A[k](c)...].concat A[...A[k](c)] for c in i)
+      e=(A[A[k](c)..][..26] for c in i)
       d=[0..25].map (x)->e.map((l)->l[x]).join ''
 
 Calculate the likelihood scores.

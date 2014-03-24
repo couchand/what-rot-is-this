@@ -1,10 +1,12 @@
-# The English alphabet, and then ordered by frequency.
+# input
+"ocdndnvqzmtnzxmzohznnvbzocvodnqzmtnzxpmzviynvaz"
 
+# the alphabet, and by frequency
 "abcdefghijklmnopqrstuvwxyz".+:a;
 "etaoinshrdlcumwfgypbvkjxqz":f;
 
 # build evey ROT decryption
-]~{97-a>}/;]{26<}%zip:d
+{97-a>}/]{27<}%zip:d
 
 # calculate likelihood
 {{f?}%{+}*}%.

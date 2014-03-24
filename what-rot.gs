@@ -1,8 +1,8 @@
 # input
-"ocdndnvqzmtnzxmzohznnvbzocvodnqzmtnzxpmzviynvaz"
+#"ocdndnvqzmtnzxmzohznnvbzocvodnqzmtnzxpmzviynvaz"
 
 # the alphabet, and by frequency
-"abcdefghijklmnopqrstuvwxyz".+:a;
+26,{97+}%.+''+:a;
 "etaoinshrdlcumwfgypbvkjxqz":f;
 
 # build evey ROT decryption

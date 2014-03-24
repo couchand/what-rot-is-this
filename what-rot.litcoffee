@@ -36,4 +36,4 @@ testing.  These characters aren't counted.
 
     module.exports = r
 
-1: http://codegolf.stackexchange.com/questions/24739/what-rot-is-this-decrypt-rot-n
+[1]: http://codegolf.stackexchange.com/questions/24739/what-rot-is-this-decrypt-rot-n
